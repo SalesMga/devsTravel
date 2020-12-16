@@ -10,31 +10,24 @@ class PreloadPage extends StatefulWidget {
 }
 
 class _PreloadPage extends State<PreloadPage> {
-
   bool loading = true;
 
-  requestInfo() async {
-     print(loading);
-
+  void requestInfo() async {
      await Future.delayed(Duration(seconds: 1));
 
     setState(() {
       loading = true;
     });
 
-    bool res = await Provider.of<AppData>(context).requestData1();
+    bool res = await Provider.of<AppData>(context).requestData(); //Provider.of<AppData>(context).requestData();
 
     if (res) {
       Navigator.pushNamed(context, '/home');
-    }else{
-     loading = false;
-     Navigator.pushNamed(context, '/home');
     }
 
     setState(() {
       loading = false;
     });
-  
   }
 
   void initSate() {

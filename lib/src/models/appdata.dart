@@ -12,7 +12,7 @@ class AppData with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<bool> requestData1() async {
+  Future<bool> requestData() async {
 
     final res = await http.get(url);
 

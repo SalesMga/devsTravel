@@ -13,7 +13,7 @@ void main() => runApp(
       )
     ],
     child: MyApp(),
-  )
+  ),
 );
 
 class MyApp extends StatelessWidget {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         '/preload': (context) => PreloadPage(),
         '/home': (context) => HomePage()
       },
-      initialRoute: '/preload',
+      initialRoute: '/preload'
     );
   }
 }
